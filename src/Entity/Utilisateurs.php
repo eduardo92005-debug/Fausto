@@ -35,6 +35,16 @@ class Utilisateurs implements UserInterface, PasswordAuthenticatedUserInterface
      */
     private $password;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Cours::class, cascade={"persist", "remove"})
+     */
+    private $est_inscrit;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Planning::class)
+     */
+    private $peut_choisir;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -122,5 +132,29 @@ class Utilisateurs implements UserInterface, PasswordAuthenticatedUserInterface
     {
         // If you store any temporary, sensitive data on the user, clear it here
         // $this->plainPassword = null;
+    }
+
+    public function getEstInscrit(): ?Cours
+    {
+        return $this->est_inscrit;
+    }
+
+    public function setEstInscrit(?Cours $est_inscrit): self
+    {
+        $this->est_inscrit = $est_inscrit;
+
+        return $this;
+    }
+
+    public function getPeutChoisir(): ?Planning
+    {
+        return $this->peut_choisir;
+    }
+
+    public function setPeutChoisir(?Planning $peut_choisir): self
+    {
+        $this->peut_choisir = $peut_choisir;
+
+        return $this;
     }
 }
