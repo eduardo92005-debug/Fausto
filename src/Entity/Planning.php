@@ -27,6 +27,11 @@ class Planning
      */
     private $heure;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Utilisateurs::class, cascade={"persist", "remove"})
+     */
+    private $peut_choisir;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -54,5 +59,22 @@ class Planning
         $this->heure = $heure;
 
         return $this;
+    }
+
+    public function getPeutChoisir(): ?Utilisateurs
+    {
+        return $this->peut_choisir;
+    }
+
+    public function setPeutChoisir(?Utilisateurs $peut_choisir): self
+    {
+        $this->peut_choisir = $peut_choisir;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->date . ' ' . $this->heure;
     }
 }

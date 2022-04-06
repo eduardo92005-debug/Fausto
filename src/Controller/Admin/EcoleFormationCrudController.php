@@ -8,6 +8,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class EcoleFormationCrudController extends AbstractCrudController
@@ -30,7 +31,8 @@ class EcoleFormationCrudController extends AbstractCrudController
             ImageField::new('imageName')
                 ->setUploadedFileNamePattern("ecole_formation_[name].[extension]")
                 ->setUploadDir('public\images\uploads\ecole_formation')
-                ->setBasePath('images/uploads/ecole_formation')
+                ->setBasePath('images/uploads/ecole_formation'),
+            AssociationField::new('cours')
                 ,
         ];
     }

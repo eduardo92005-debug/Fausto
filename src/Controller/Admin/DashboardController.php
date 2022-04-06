@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\Entity\Contact;
 use App\Entity\Cours;
 use App\Entity\Salles;
 use App\Entity\Planning;
@@ -42,5 +43,6 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Planning', 'fas fa-calendar', Planning::class);
         yield MenuItem::linkToCrud('Utilisateurs', 'fas fa-users', Utilisateurs::class);
         yield MenuItem::linkToCrud('Tranche Age Categorie', 'fas fa-list', TrancheAgeCategorie::class);
+        yield MenuItem::linkToCrud('Contacts Message', 'fas fa-list', Contact::class);
     }
 }

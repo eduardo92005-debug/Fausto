@@ -36,7 +36,10 @@ class CoursCrudController extends AbstractCrudController
                 ->setUploadDir('public\images\uploads\cours')
                 ->setBasePath('images/uploads/cours')
                 ,
-            AssociationField::new('propose')
+            AssociationField::new('propose'),
+            AssociationField::new('est_inscrit'),
+            AssociationField::new('est_dispense'),
+            AssociationField::new('enseigne')
             ,
         ];
     }

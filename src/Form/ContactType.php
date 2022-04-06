@@ -6,6 +6,7 @@ use App\Entity\Contact;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ContactType extends AbstractType
@@ -18,6 +19,12 @@ class ContactType extends AbstractType
             ->add('message', TextareaType::class, [
                 'attr' => [
                     'class' => 'w-70',
+                ],
+            ])
+            ->add('save', SubmitType::class, [
+                'label' => 'Envoyer',
+                'attr' => [
+                    'class' => 'btn btn-primary',
                 ],
             ])
         ;

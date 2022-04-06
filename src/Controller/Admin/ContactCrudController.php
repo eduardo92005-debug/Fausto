@@ -2,16 +2,16 @@
 
 namespace App\Controller\Admin;
 
-use App\Entity\Formateurs;
+use App\Entity\Contact;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
-use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
-class FormateursCrudController extends AbstractCrudController
+class ContactCrudController extends AbstractCrudController
 {
     public static function getEntityFqcn(): string
     {
-        return Formateurs::class;
+        return Contact::class;
     }
 
     
@@ -19,10 +19,8 @@ class FormateursCrudController extends AbstractCrudController
     {
         return [
             TextField::new('nom'),
-            TextField::new('prenom'),
-            TextField::new('email'),
-            TextField::new('tel'),
-            AssociationField::new('cours'),
+            TextField::new('sujet'),
+            TextEditorField::new('message'),
         ];
     }
     

@@ -54,6 +54,11 @@ class Salles
      */
     private $updatedAt;
 
+    /**
+     * @ORM\OneToOne(targetEntity=Cours::class, cascade={"persist", "remove"})
+     */
+    private $est_dispense;
+
 
     public function getId(): ?int
     {
@@ -129,6 +134,23 @@ class Salles
     public function setUpdatedAt(\DateTimeInterface $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function __toString()
+    {
+        return $this->lieu;
+    }
+
+    public function getEstDispense(): ?Cours
+    {
+        return $this->est_dispense;
+    }
+
+    public function setEstDispense(?Cours $est_dispense): self
+    {
+        $this->est_dispense = $est_dispense;
 
         return $this;
     }

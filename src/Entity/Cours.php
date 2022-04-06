@@ -294,4 +294,6 @@ class Cours
         return $this;
     }
 
+    
+
 }

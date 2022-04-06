@@ -97,4 +97,9 @@ class TrancheAgeCategorie
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->nom_tranche_age;
+    }
 }
