@@ -1,0 +1,27 @@
+{% extends 'base_post.html.twig' %}
+
+{% block title %}Homepage{% endblock %}
+
+{% block post_text_col_1 %}
+    <h3 class="mb-1 text-center"> Presentation de notre ecole </h3>
+    <br/>
+    <p class="text-left"> Notre ecole </p>
+    <p class="text-left"> L`atelie de as propose de cours et des stages dessin ainsi que de peinture pour adolescents et adultes a Cergy. </p>
+    <img class="w-100 mx-auto" src="{{ asset('images/content/carousel4.jpg') }}" height=250>
+{% endblock %}
+                   
+         
+{% block post_text_col_2 %}
+    <img class="w-100 mx-auto" src="{{ asset('images/content/carousel4.jpg') }}" height=250>
+    <p class="text-left">TEMIOGNAGES </p>
+    <p class="text-left"> Temoignage de XXXX, eleve en cours de dessin et peinture du lundi pour adulte. <br/>
+    Un tres grand merci a XXXX pour mavoir permis de progresser de maniere spectaculaire en maccuellant dans ses cours de dessin et peinture.
+    </p>
+    <p class="text-left">
+    J ajouterai que lambiance de lecole est a la fois studieuse, tres <br/>
+    decontractee et propice a une belle evolution.
+    </p>
+    <p class="text-left">
+    Merci encore
+    </p>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}CONTACT{% endblock %}
+{% form_theme form 'bootstrap_5_layout.html.twig' %}
+{% block body %}
+<style>
+#contact_message {
+    min-height:25vh;
+}
+</style>
+
+    <div class="container">
+        <div class="d-flex flex-column h-100 align-items-center justify-content-center">
+        <h1 class="justify-self-start">Contactez-nous pour vous inscrire à un cours!!! </h1>
+        <div class="form-wrapper w-75">
+            {{ form(form) }}
+        </div>
+        </div>
+    </div>
+    
+{% endblock %}

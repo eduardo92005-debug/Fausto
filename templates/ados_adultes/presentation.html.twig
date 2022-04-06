@@ -1,0 +1,51 @@
+{% extends 'base_post.html.twig' %}
+
+{% block title %}Hello AdosAdultesController!{% endblock %}
+
+{% block banner %}
+<span></span>
+{% endblock %}
+
+
+{% block post_text_col_1 %}
+    <div class="container mx-0 mt-0 d-flex flex-column justify-content-between" style="height:94.999998%;width: 120%;">
+             <a class="btn w-25 mb-2" style="background-color:#34eb46;"> RETOUR </a>
+        <div class="row justify-content-between">
+            <div class="col-md-6">
+                <img class="w-100 mx-auto" style="object-fit:cover;" src="{{ asset('images/content/cours7JPG.JPG') }}">
+            </div>
+            <div class="col-md-6">
+                 <img class="w-100 mx-auto" style="object-fit:cover;height:125%;" src="{{ asset('images/content/cours7JPG.JPG') }}">
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="row align-items-end justify-content-end" style="min-height:65vh;">
+            <a class="btn w-25 align-middle" style="background-color:#34eb46;"> CONTACTEZ-NOUS </a>
+        </div>
+    </div>
+{% endblock %}
+
+{% block post_text_col_2 %}
+   <article class="blockquote text-left">
+        <small> 
+            <p> Cours de portrait en dessin et peinture pour adolescent et adultes a Cergy</p>
+            <p> Ce cours de portrait en dessin et peinture vous permettra de realiser des portraits justes et realiste. </p>
+            <p>Reussir un portrait en dessin ou en peinture est pourtant d une grande complexite. En effet, le
+            visage est un des elements les plus complexes a representer, il suffit de decater un cell ou sine
+            bouche de quelques milimetres, de modifier une pommette, de mal placer une pupile pour rater un portrait.
+            </p>
+
+            
+            <p>Lois de ce cours de portrait vous apprendrez une methode de travail qui vous simplifiera la sache et vous aldera a dessiner ou peindre les portraits de votre choix d apres photo ou directement d apres un modele</p>
+
+            <p> Ce cours de portrait en dessin et peinture pour adolescent et adulte vous permettra de decouvrir:</p>
+            <ul>
+                <li>Les proportions du visage</li>
+                <li>Les differents types de visages</li>
+                <li>Les differences morphologiques hommes/femmes, enfants/ados/adultes, europeens/asiatiques/africans</li>
+                <li>Comment dessiner un visage de face, de profit, en plongee, en contreplongee</li>
+            </ul>
+        </small>
+   </article>
+{% endblock %}

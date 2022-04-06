@@ -1,0 +1,20 @@
+header nav {
+    background-color: rgb(253, 188, 164);
+}
+
+footer .container {
+    background-color:rgb(88, 212, 221);
+}
+
+.nav-item > .nav-link {
+    color: white!important;;
+}
+.navbar-brand {
+    color: white !important;
+}
+.navbar-text {
+    color: white !important;
+}
+.banner {
+    width: 90%;
+}
